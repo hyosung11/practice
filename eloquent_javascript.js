@@ -56,3 +56,36 @@ let templateLiteral = `half of 100 is ${100 / 2}`
 // Unary Operators
 // console.log(typeof 4.5); // number
 // console.log(typeof "x"); // string
+
+// console.log(1 + 1 == 2 && 10 * 10 > 50); // true
+
+// ternary operator
+// the value on the left of the question mark "picks" which of the other two values will come out. When it is true, it chooses the middle value, and when it is false, it chooses the right value.
+// console.log(true ? 1 : 2); // 1
+// console.log(false ? 1 : 2); // 2
+
+// console.log(1 + 1 ? > 2 : 0);
+
+// let isStudent = true;
+// let price = isStudent ? 8 : 12;
+// console.log(price); // 8
+// If patron is a student the price is 8 if not it's 12
+
+// Nested ternary
+// let isStudent = false;
+// let isSenior = true;
+//
+// let price = isStudent ? 8 : isSenior ? 6 : 10;
+// console.log(price); // 6
+// If the person is a student the price is 8, else if the person is a senior the price is 6, else the price is 10.
+
+// Multiple Operators
+let isStudent = true;
+let price = 12;
+
+isStudent ? (
+  price = 8,
+  alert('Please check for student ID')
+) : (
+    alert('Enjoy the movie')
+)
