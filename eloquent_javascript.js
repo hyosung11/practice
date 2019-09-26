@@ -8,13 +8,13 @@
 //
 // console.log(sum(range(1, 10)));
 
-function factorial(n) {
-  if (n == 0) {
-    return 1;
-  } else {
-    return factorial(n - 1) * n;
-  }
-}
+// function factorial(n) {
+//   if (n == 0) {
+//     return 1;
+//   } else {
+//     return factorial(n - 1) * n;
+//   }
+// }
 
 // console.log(factorial(8));
 // => 40320
@@ -80,12 +80,50 @@ let templateLiteral = `half of 100 is ${100 / 2}`
 // If the person is a student the price is 8, else if the person is a senior the price is 6, else the price is 10.
 
 // Multiple Operators
-let isStudent = true;
-let price = 12;
+// let isStudent = true;
+// let price = 12;
+//
+// isStudent ? (
+//   price = 8,
+//   alert('Please check for student ID')
+// ) : (
+//     alert('Enjoy the movie')
+// )
 
-isStudent ? (
-  price = 8,
-  alert('Please check for student ID')
-) : (
-    alert('Enjoy the movie')
-)
+// while and do loops
+// let number = 0;
+// while (number <= 12) {
+//   console.log(number);
+//   number = number + 2;
+// }
+
+// let result = 1;
+// let counter = 0;
+// while (counter < 10) {
+//   result = result * 2;
+//   counter = counter + 1;
+// }
+// console.log(result); // => 1024
+
+// do loop - always executes its body at least once
+// let yourName;
+// do {
+//   yourName = prompt("Who are you?");
+// } while (!yourName);
+// console.log(yourName);
+
+// Indenting Code
+// if (false != true) {
+//   console.log("That makes sense");
+//   if (1 < 2) {
+//     console.log("No surprises there");
+//   }
+// }
+
+// for loops
+// for (let number = 0; number <= 12; number = number + 2) {
+//   console.log(number);
+// }
+
+let result = 1;
+for (let counter = 0; )
