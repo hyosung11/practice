@@ -121,9 +121,87 @@ let templateLiteral = `half of 100 is ${100 / 2}`
 // }
 
 // for loops
+// initializes, checks, updates
 // for (let number = 0; number <= 12; number = number + 2) {
 //   console.log(number);
 // }
 
-let result = 1;
-for (let counter = 0; )
+// let result = 1;
+// for (let counter = 0; counter < 10; counter = counter + 1) {
+//   result = result * 2;
+// }
+// console.log(result);
+
+// for (let current = 20; ; current = current + 1) {
+//   if (current % 7 == 0) {
+//     console.log(current);
+//     break;
+//   }
+// }
+// => 21
+
+// for (let number = 0; number <= 12; number += 2) {
+//   console.log(number);
+// }
+
+// Looping a Triangle
+// for (let line = "#"; line.length < 8; line += "#")
+// console.log(line);
+
+// for (let triangle = "#"; triangle.length < 8; triangle += "#")
+// console.log(triangle);
+
+// FizzBuzz
+// for (let n = 1; n <= 100; n++) {
+//   let output = "";
+//   if (n % 3 == 0) output += "Fizz";
+//   if (n % 5 == 0) output += "Buzz"
+//   console.log(output || n);
+// }
+
+// for (let i = 0; i <= 100; i++) {
+//   let output = "";
+//   if (i % 3 == 0) output += "Fizz"
+//   if (i % 5 == 0) output += "Buzz"
+//   console.log(output || i);
+// }
+// for(let i=0;i<100;)console.log((++i%3?'':'fizz')+(i%5?'':'buzz')||i)
+
+// for (let i = 1; i <= 100; i++) {
+//   if (i % 15 == 0)
+//     console.log("FizzBuzz");
+//   else if (i % 3 == 0)
+//     console.log("Fizz");
+//   else if (i % 5 == 0)
+//     console.log("Buzz");
+//   else
+//     console.log(i);
+// }
+
+// Chessboard
+// this is the variable setting
+let size = 16;
+
+// this is the empty string we're going to add either " " or "#" or new line
+let board = "";
+
+// in the outer loop we add newLine to separate rows
+for (let x = 0; x < size; x++) {
+  // every inner loop represents a line, and alternatively it's adding either " " or "#" to the string that's being populated
+  for (let y = 0; y < size; y++) {
+    if ((x + y) % 2 == 0) {
+      board += " ";
+    } else {
+      board += "#"
+    }
+  }
+  board += "\n";
+}
+
+// console.log(board);
+
+const square = (x) => {
+  return x * x;
+}
+
+console.log(square(12));
