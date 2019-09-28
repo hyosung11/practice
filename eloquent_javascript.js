@@ -204,4 +204,194 @@ const square = (x) => {
   return x * x;
 }
 
-console.log(square(12));
+// console.log(square(12));
+
+// Bindings and Scopes
+const halve = (n) => {
+  return n / 2;
+};
+
+let n = 10;
+// console.log(halve(100));
+// console.log(n);
+
+// const hummus = function(factor) {
+//   const ingredient = function(amount, unit, name) {
+//     let ingredientAmount = amount * factor;
+//     if (ingredientAmount > 1) {
+//       unit += "s";
+//     }
+//
+//   };
+//   ingredient(1, "can", "chickpeas");
+//   ingredient(0.25, "cup", "tahini");
+//   ingredient(0.25, "cup", "lemon juice");
+//   ingredient(1, "clove", "garlic");
+//   ingredient(2, "tablespoon", "olive oil");
+//   ingredient(0.5, "teaspoon", "cumin");
+// };
+// console.log(hummus(`${ingredientAmount} ${unit} ${name}`));
+
+// declaration notation
+// console.log("The future says:", future());
+//
+// function future() {
+//   return "You'll never have flying cars";
+// }
+
+// Arrow Functions
+// const power = (base, exponent) => {
+//   let result = 1;
+//   for (let count = 0; count < exponent; count++) {
+//     result += base
+//   }
+//   return result;
+// }
+//
+// console.log(power(5, 6));
+
+// optional arguments
+// function power(base, exponent = 2) {
+//   let result = 1;
+//   for (let count = 0; count < exponent; count++) {
+//     result *= base;
+//   } return result; 4
+// }
+//
+// console.log(power(4)); // => 16
+// console.log(power(2, 3));
+
+// let printFarmInventory = (cows, chickens) => {
+//   let cowString = String(cows);
+//   while (cowString.length < 3) {
+//     cowString = "0" + cowString;
+//   }
+//   console.log(`${cowString} Cows`);
+//   let chickenString = String(chickens);
+//   while (chickenString.length < 3) {
+//     chickenString = "0" + chickenString;
+//   }
+//   console.log(`${chickenString} Chickens`);
+// }
+// printFarmInventory(7, 11)
+
+// let printZeroPaddedWithLabel = (number, label) => {
+//   let numberString = String(number);
+//   while (numberString.length < 3) {
+//     numberString = "0" + numberString;
+//   }
+//   console.log(`${numberString} ${label}`);
+// }
+//
+// let printFarmInventory = (cows, chickens, pigs) => {
+//   printZeroPaddedWithLabel(cows, "Cows");
+//   printZeroPaddedWithLabel(chickens, "Chickens");
+//   printZeroPaddedWithLabel(pigs, "Pigs");
+// }
+//
+// printFarmInventory(7, 11, 3);
+// 007 Cows
+// 011 Chickens
+// 003 Pigs
+
+// const zeroPad = (number, width) => {
+//   let string = String(number);
+//   while (string.length < width) {
+//     string = "0" + string;
+//   }
+//   return string;
+// }
+//
+// const printFarmInventory = (cows, chickens, pigs) => {
+//   console.log(`${zeroPad(cows, 3)} Cows`);
+//   console.log(`${zeroPad(chickens, 3)} Chickens`);
+//   console.log(`${zeroPad(pigs, 3)} Pigs`);
+// }
+//
+// printFarmInventory(7, 16, 3)
+// 007 Cows
+// 016 Chickens
+// 003 Pigs
+
+// Minimum
+// let min = (a, b) => {
+//   if (a < b) {
+//     return a
+//   } else {
+//     return b
+//   }
+// }
+//
+// console.log(min(0, 10));
+// console.log(min(0, -10));
+// console.log(min(5, 5));
+
+// function min(a, b) {
+//   if (a < b) return a;
+//   else return b
+// }
+//
+// console.log(min(0, 10));
+// console.log(min(0, -10));
+// console.log(min(5, 5));
+
+// RECURSION
+// const isEven = (number) => {
+//   if (number % 2 == 0) {
+//     return true
+//   } else {
+//     return false
+//   }
+// }
+// console.log(isEven(50));
+// console.log(isEven(75));
+// console.log(isEven(-1));
+// console.log(isEven(3));
+//
+// function isEven(n) {
+//   if (n == 0) return true;
+//   else if (n == 1) return false;
+//   else if (n < 0) return isEven(-n)
+//   else return isEven(n - 2);
+// }
+// // console.log(isEven(50));
+// // // → true
+// console.log(isEven(77));
+// // → false
+// console.log(isEven(-2));
+// // → false
+
+// let isEven = (n) => {
+//   if (n == 0) return true;
+//   else if (n == 1) return false;
+//   else if (n < 0) return isEven(-n)
+//   else return isEven(n - 2)
+// }
+// console.log(isEven(-34));
+
+// BEAN COUNTING
+// const countBs = (string) => {
+//   for (let i = 0; i < string.length; i++)
+//   if (string === "B") {
+//     return string[i]
+//   }
+// }
+
+// console.log(countBs("BBC"));
+
+// function countChar(string, ch) {
+//   let counted = 0;
+//   for (let i = 0; i < string.length; i++) {
+//     if (string[i] == ch) {
+//       counted += 1;
+//     }
+//   }
+//   return counted;
+// }
+//
+// function countBs(string) {
+//   return countChar(string, "B")
+// }
+//
+// console.log(countBs("BBBBC"));
+// console.log(countChar("bbasdkiud", "b"));
