@@ -395,3 +395,16 @@ let n = 10;
 //
 // console.log(countBs("BBBBC"));
 // console.log(countChar("bbasdkiud", "b"));
+
+// null.length
+
+// let doh = "Doh";
+// console.log(typeof doh.toUpperCase); // => function
+// console.log(doh.toUpperCase()); // => DOH
+
+// The Lycanthrope's Log
+let journal = [];
+
+const addEntry = (events, squirrel) => {
+  journal.push({events, squirrel});
+}

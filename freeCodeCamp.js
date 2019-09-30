@@ -22,13 +22,26 @@
 //   4,  5,  6,  7,  8,
 //   9, 10, 11, 12, 13
 // ]
-
-let popShift = (array) => {
-  let popped = array.pop()
-  let shifted = array.shift()
-  return [shifted, completed]
-}
-// pop() removes last element = 'completed'
-// shift() removes first element = 'challenge'
-console.log(popShift(['challenge', 'is', 'not', 'completed']));
+//
+// let popShift = (array) => {
+//   let popped = array.pop()
+//   let shifted = array.shift()
+//   return [shifted, completed]
+// }
+// // pop() removes last element = 'completed'
+// // shift() removes first element = 'challenge'
+// console.log(popShift(['challenge', 'is', 'not', 'completed']));
 // [ 'challenge', 'completed' ]
+
+// const sumOfTen = (array) => {
+//   array.splice(1, 2)
+//   return array.reduce((a, b) => a + b)
+// }
+// console.log(sumOfTen([2, 5, 1, 5, 2, 1]));
+
+function htmlColorNames(array) {
+  array.splice(0, 2, 'DarkSalmon', 'BlanchedAlmond')
+  return array
+}
+
+console.log(htmlColorNames(['DarkGoldenRod', 'WhiteSmoke', 'LavenderBlush', 'PaleTurquoise', 'FireBrick']));

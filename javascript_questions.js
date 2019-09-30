@@ -109,3 +109,11 @@ const mouse = {
 //
 //
 // When you change one object, you change all of them.
+
+// 16.
+let number = 0;
+// postfix unary operator
+console.log(number++);
+// prefix unary operator
+console.log(++number);
+console.log(number);
