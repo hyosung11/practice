@@ -403,8 +403,13 @@ let n = 10;
 // console.log(doh.toUpperCase()); // => DOH
 
 // The Lycanthrope's Log
-let journal = [];
+// let journal = [];
+//
+// const addEntry = (events, squirrel) => {
+//   journal.push({events, squirrel});
+// }
 
-const addEntry = (events, squirrel) => {
-  journal.push({events, squirrel});
+// The Sum of a Range
+function range (start, end) {
+  return array
 }
