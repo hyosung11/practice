@@ -39,20 +39,20 @@
 // }
 // console.log(sumOfTen([2, 5, 1, 5, 2, 1]));
 
-function htmlColorNames(array) {
-  array.splice(0, 2, 'DarkSalmon', 'BlanchedAlmond')
-  return array
-}
+// function htmlColorNames(array) {
+//   array.splice(0, 2, 'DarkSalmon', 'BlanchedAlmond')
+//   return array
+// }
 
 // console.log(htmlColorNames(['DarkGoldenRod', 'WhiteSmoke', 'LavenderBlush', 'PaleTurquoise', 'FireBrick']));
 
 // BASIC ALGORITHM SCRIPTING
 
 // 1. Convert Celsius to Fahrenheit
-function convertToF(celsius) {
-  let fahrenheit = (celsius * 9 /5) + 32;
-  return fahrenheit;
-}
+// function convertToF(celsius) {
+//   let fahrenheit = (celsius * 9 /5) + 32;
+//   return fahrenheit;
+// }
 
 // console.log(convertToF(30))
 // console.log(convertToF(10))
@@ -201,17 +201,82 @@ function convertToF(celsius) {
 //
 // console.log(confirmEnding("Bastian", "n")); => true
 
-function confirmEnding (str, target) {
-  return str.endsWith(target)
-}
-
-console.log(confirmEnding("SungOh", "oh"));
+// function confirmEnding (str, target) {
+//   return str.endsWith(target)
+// }
+//
+// console.log(confirmEnding("SungOh", "Oh")); // =>  true
 
 // function confirmEnding (str, target) {
-//   if (str.endsWith(target)) {
+//   if (str.substr(-target.length) === target) {
+//     console.log(str.substr(-target.length));
 //     return true;
 //   }
 //   return false;
 // }
 //
-// console.log(confirmEnding("Bastian", "n"));
+// console.log(confirmEnding("Bastian", "no"));
+
+// let sentence = "I'm running home in 5 minutes.";
+// console.log(sentence.substr(-4));
+
+// const confirmEnding = (str, target) => {
+//   if (str.substr(-target.length) === target) {
+//     return true;
+//   }
+//   return false;
+// }
+
+// function confirmEnding (str, target) {
+//   return str.substr(-target.length) === target;
+// }
+//
+// // console.log(confirmEnding("Open sesame", "same"));
+// console.log(confirmEnding("He has to give me a new name", "name"));
+
+// function confirmEnding (str, target) {
+//   return str.slice(-target.length) === target;
+// }
+//
+// console.log(confirmEnding("Congratulation", "on")); //=> true
+
+// const confirmEnding = (string, target) => {
+//   if (string.substr(-target.length) === target) {
+//     return true;
+//   }
+//   return false;
+// }
+//
+// console.log(confirmEnding("bananas", "nas"));
+// => true
+
+// 7. Repeat a String Repeat a String
+// function repeatStringNumTimes(str, num) {
+//   // return an empty string if num is not a positive number
+//   if (num < 0) return "";
+//   return str.repeat(num)
+// }
+//
+// console.log(repeatStringNumTimes("abc", 3));
+
+// function repeatStringNumTimes(str, num) {
+//   let final = ""
+//   if (num < 0) return "";
+//   for (let i = 0; i < num; i++){
+//     final += str;
+//   }
+//   return final;
+
+// recursive version
+// function repeatStringNumTimes(str, num) {
+//   if (num < 0) return "";
+//
+//   if (num === 1) return str; // base case
+//
+//   return str + repeatStringNumTimes(str, num - 1)
+// }
+//
+// console.log(repeatStringNumTimes("*", 8));
+// console.log(repeatStringNumTimes("abc", 3));
+
+// 8. Truncate a String
