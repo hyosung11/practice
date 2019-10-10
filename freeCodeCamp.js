@@ -260,19 +260,233 @@
 //
 // Likewise, getIndexToIns([20,3,5], 19)should return 2because once the array has been sorted it will look like [3,5,20]and 19is less than 20(index 2) and greater than 5(index 1).
 
-function getIndexToIns(arr, num) {
-  // Find my place in this sorted array.
-  // console.log(arr);
+// function getIndexToIns(arr, num) {
+//   // Find my place in this sorted array.
+//   // console.log(arr);
+//
+//   arr.sort(function(a, b) {
+//     return a - b;
+//   })
+//   for (var i = 0; i < array.length; i++) {
+//     if (num <= arr[i]) {
+//       return i;
+//     }
+//   }
+//   return arr.length;
+// }
+//
+// console.log(getIndexToIns([40, 60, 5], 50));
 
-  arr.sort(function(a, b) {
-    return a - b;
-  })
-  for (var i = 0; i < array.length; i++) {
-    if (num <= arr[i]) {
-      return i;
-    }
+// JavaScript Algorithms and Data Structures Projects: Caesars Cipher
+// One of the simplest and most widely known ciphers is a Caesar cipher, also known as a shift cipher. In a shift cipher the meanings of the letters are shifted by some set amount.
+//
+// A common modern use is the ROT13 cipher, where the values of the letters are shifted by 13 places. Thus 'A' ↔ 'N', 'B' ↔ 'O' and so on.
+//
+// Write a function which takes a ROT13 encoded string as input and returns a decoded string.
+//
+// All letters will be uppercase. Do not transform any non-alphabetic character (i.e. spaces, punctuation), but do pass them on.
+// function rot13(str) { // LBH QVQ VG!
+//   let solved = "";
+//   for (var i = 0; i < str.length; i++) {
+//     let asciiNum = str[i].charCodeAt();
+//     if (asciiNum >= 65 && asciiNum <= 77) {
+//       solved += String.fromCharCode(asciiNum + 13);
+//     } else if (asciiNum >= 78 && asciiNum <= 90) {
+//       solved += String.fromCharCode(asciiNum - 13);
+//     } else {
+//       solved += str[i];
+//     }
+//   }
+//   return solved;
+// }
+//
+// // [a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z]
+// // Change the inputs below to test
+// console.log(rot13("SERR PBQR PNZC"));
+// console.log(rot13("Z"));
+
+// Intermediate Algorithm Scripting: Sum All Numbers in a Range
+// We'll pass you an array of two numbers. Return the sum of those two numbers plus the sum of all the numbers between them.
+//
+// The lowest number will not always come first.
+// function sumAll(arr) {
+//   let start = Math.min(arr[0], arr[1]);
+//   let end = Math.max(arr[0], arr[1]);
+//   let total = 0;
+//   for (var i = start; i <= end; i++) {
+//     total += i;
+//   }
+//   return total;
+// }
+//
+// console.log(sumAll([10, 5]));
+
+// const sumAll = (arr) => {
+//   let min = Math.min(arr[0], arr[1]);
+//   let max = Math.max(arr[0], arr[1]);
+//   let total = 0;
+//   for (var i = min; i <= max; i++) {
+//     total += i;
+//   }
+//   return total;
+// }
+//
+// console.log(sumAll([10, 5]));
+
+// Intermediate Algorithm Scripting: Diff Two Arrays
+// Compare two arrays and return a new array with any items only found in one of the two given arrays, but not both. In other words, return the symmetric difference of the two arrays.
+
+// function diffArray(arr1, arr2) {
+//   let result = [];
+//   for (var i = 0; i < arr1.length; i++) {
+//     if (arr2.indexOf(arr1[i]) === -1) {
+//       result.push(arr1[i]);
+//     }
+//   }
+//   for (var j = 0; j < arr2.length; j++) {
+//     if (arr1.indexOf(arr2[j]) === -1) {
+//       result.push(arr2[j]);
+//     }
+//   }
+//   return result;
+// }
+// console.log(diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]));
+// console.log(diffArray([1, 2, 3], [4, 3, 6]));
+
+// function diffArray(arr1, arr2) {
+//   let combinedArray = arr1.concat(arr2);
+//
+//   return combinedArray.filter(function(num) {
+//     if (arr1.indexOf(num) === -1 || arr2.indexOf(num) === -1) {
+//       return num;
+//     }
+//   });
+// }
+//
+// console.log(diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]));
+// console.log(diffArray([1, 2, 3], [4, 3, 6]));
+
+// JavaScript Algorithms and Data Structures Projects: Roman Numeral Converter
+// Convert the given number into a roman numeral.
+//
+// All roman numerals answers should be provided in upper-case.
+// function convertToRoman(num) {
+//  let romanToNum = {
+//    M: 1000,
+//    CM: 900,
+//    D: 500,
+//    CD: 400,
+//    C: 100,
+//    XC: 90,
+//    L: 50,
+//    XL: 40,
+//    X: 10,
+//    IX: 9,
+//    V: 5,
+//    IV: 4,
+//    I: 1
+//  };
+//  let roman = "";
+//  for (var key in romanToNum) {
+//    console.log("key: ", key);
+//    // console.log("value: ", romanToNum[key]);
+//    while (num >= romanToNum[key]) {
+//      roman += key;
+//      num -= romanToNum[key];
+//      console.log("Num is decreased:", num);
+//    }
+//  }
+//  return roman;
+// }
+//
+// console.log(convertToRoman(3999));
+
+// Intermediate Algorithm Scripting: Wherefore art thou
+// Make a function that looks through an array of objects (first argument) and returns an array of all objects that have matching name and value pairs (second argument). Each name and value pair of the source object has to be present in the object from the collection if it is to be included in the returned array.
+//
+// For example, if the first argument is [{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], and the second argument is { last: "Capulet" }, then you must return the third object from the array (the first argument), because it contains the name and its value, that was passed on as the second argument.
+// function whatIsInAName(collection, source) {
+//   // What's in a name?
+//   var arr = [];
+//   // Only change code below this line
+//   let keys = Object.keys(source)
+//   console.log(keys);
+//   // Only change code above this line
+//   return arr;
+// }
+
+// function whatIsInAName(collection, source) {
+//   let keys = Object.keys(source)
+//   return collection.filter(function(obj) {
+//     for (var key of keys) {
+//       if (!obj.hasOwnProperty(key) || obj[key] !== source[key]) {
+//         return false;
+//       }
+//     }
+//     return true;
+//   })
+// }
+
+// const nums = [1, 2, 3, 4, 5];
+// nums.filter(function(num) {
+//   return num < 3;
+//   console.log(num);
+// })
+// console.log(nums);
+
+// whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], { last: "Capulet" });
+// console.log(whatIsInAName([{ "apple": 1, "bat": 2 }, { "bat": 2 }, { "apple": 1, "bat": 2, "cookie": 2 }], { "apple": 1, "bat": 2 }))
+// should return [{ "apple": 1, "bat": 2 }, { "apple": 1, "bat": 2, "cookie": 2 }].
+
+// Intermediate Algorithm Scripting: Search and Replace
+// Perform a search and replace on the sentence using the arguments provided and return the new sentence.
+//
+// First argument is the sentence to perform the search and replace on.
+//
+// Second argument is the word that you will be replacing (before).
+//
+// Third argument is what you will be replacing the second argument with (after).
+//
+// Note
+// Preserve the case of the first character in the original word when you are replacing it. For example if you mean to replace the word "Book" with the word "dog", it should be replaced as "Dog"
+// function myReplace(str, before, after) {
+//   if (before[0] === before[0].toUpperCase()) {
+//     after = after[0].toUpperCase() + after.slice(1);
+//   }
+//   return str.replace(before, after);
+// }
+
+// function myReplace(str, before, after) {
+//   let words = str.split(" ");
+//
+//   if (before[0] === before[0].toUpperCase()) {
+//     after = after[0].toUpperCase() + after.slice(1);
+//   }
+//   for (var i = 0; i < words.length; i++) {
+//     if (words[i] === before) {
+//       words[i] = after;
+//     }
+//   }
+//   return words.join(" ");
+// }
+//
+// console.log(myReplace("A quick brown fox jumped over the lazy dog", "jumped", "leaped"));
+
+// Intermediate Algorithm Scripting: Pig Latin
+// Translate the provided string to pig latin.
+//
+// Pig Latin takes the first consonant (or consonant cluster) of an English word, moves it to the end of the word and suffixes an "ay".
+//
+// If a word begins with a vowel you just add "way" to the end.
+//
+// Input strings are guaranteed to be English words in all lowercase.
+function translatePigLatin(str) {
+  let firstVowel = str.match(/[aeiou]/);
+  let firstPosition = str.indexOf(firstVowel);
+  if (firstPosition > 0) {
+    return str.slice(firstPosition) + str.slice(0, firstPosition) + 'ay';
   }
-  return arr.length;
+  return str + 'way';
 }
 
-console.log(getIndexToIns([40, 60, 5], 50));
+console.log(translatePigLatin("consonant"));
