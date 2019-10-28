@@ -480,13 +480,377 @@
 // If a word begins with a vowel you just add "way" to the end.
 //
 // Input strings are guaranteed to be English words in all lowercase.
-function translatePigLatin(str) {
-  let firstVowel = str.match(/[aeiou]/);
-  let firstPosition = str.indexOf(firstVowel);
-  if (firstPosition > 0) {
-    return str.slice(firstPosition) + str.slice(0, firstPosition) + 'ay';
-  }
-  return str + 'way';
+// function translatePigLatin(str) {
+//   let firstVowel = str.match(/[aeiou]/);
+//   let firstPosition = str.indexOf(firstVowel);
+//   if (firstPosition > 0) {
+//     return str.slice(firstPosition) + str.slice(0, firstPosition) + 'ay';
+//   }
+//   return str + 'way';
+// }
+//
+// console.log(translatePigLatin("consonant"));
+
+// Basic Data Structures: Iterate Through All an Array's Items Using For Loops
+// function filteredArray(arr, elem) {
+//   let newArr = [];
+//   // change code below this line
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i].indexOf(elem) === -1) { // checks every parameter for the element and if it is NOT there continues the code
+//       newArr.push(arr[i]); // inserts the element of the array in the new filtered array
+//     }
+//   }
+//   // change code above this line
+//   return newArr;
+// }
+//
+// // change code here to test different cases:
+// console.log(filteredArray([[3, 2, 3], [1, 6, 3], [3, 13, 26], [19, 3, 9]], 3));
+// console.log(filteredArray([[10, 8, 3], [14, 6, 23], [3, 18, 6]], 18)); // should return [ [10, 8, 3], [14, 6, 23] ]
+// console.log(filteredArray([ ["trumpets", 2], ["flutes", 4], ["saxophones", 2] ], 2)); // should return [ ["flutes", 4] ]
+
+// Basic Data Structures: Create complex multi-dimensional arrays
+// let myNestedArray = [
+//   // change code below this line
+//   ['unshift', false, 1, 2, 3, ['complex', 'nested', 'deep']],
+//   ['loop', 'shift', [6, 7, 1000, ['method', 'deeper']]],
+//   ['concat', false, true, 'spread', 'array'],
+//   ['mutate', 1327.98, [['splice', ['slice', 'deepest', 'push']]]],
+//   ['iterate', 1.3849, 7, '8.4876', 'arbitrary', 'depth']
+//   // change code above this line
+// ];
+//
+// console.log(myNestedArray);
+//
+// // OR
+// let myNestedArray = [
+//   // change code below this line
+//   ['unshift', false, 1, 2, 3, 'complex', 'nested'],
+//   ['loop', 'shift', 6, 7, 1000, 'method'],
+//   ['concat', false, true, 'spread', 'array',["deep"]],
+//   ['mutate', 1327.98, 'splice', 'slice', 'push', [["deeper"]]],
+//   ['iterate', 1.3849, 7, '8.4876', 'arbitrary', 'depth', [[["deepest"]]] ]
+//   // change code above this line
+// ];
+
+// Basic Data Structures: Copy an Array with the Spread Operator
+// function copyMachine(arr, num) {
+//   let newArr = [];
+//   while (num >= 1) {
+//     // change code below this line
+//     newArr.push([...arr]);
+//     // change code above this line
+//     num--;
+//   }
+//   return newArr;
+// }
+//
+// // change code here to test different cases:
+// console.log(copyMachine([true, false, true], 2));
+
+// Basic Data Structures: Combine Arrays with the Spread Operator
+// function spreadOut() {
+//   let fragment = ['to', 'code'];
+//   let sentence = ['learning', ...fragment, 'is', 'fun']; // change this line
+//   return sentence;
+// }
+//
+// // do not change code below this line
+// console.log(spreadOut());
+
+// Basic Data Structures: Check For The Presence of an Element With indexOf()
+// function quickCheck(arr, elem) {
+//   // change code below this line
+//   if (arr.indexOf(elem) === -1) {
+//     return false;
+//   }
+//   return true;
+//   // change code above this line
+// }
+
+// Solution 2
+// const quickCheck = (arr, elem) => {
+//   if (arr.indexOf(elem) >= 0) {
+//     return true;
+//   }
+//   return false;
+// }
+
+// Solution 3
+// function quickCheck(arr, elem) {
+//   return arr.indexOf(elem) >= 0 ? true : false;
+// }
+//
+// change code here to test different cases:
+// console.log(quickCheck(['squash', 'onions', 'shallots'], 'mushrooms'));
+// console.log(quickCheck(["squash", "onions", "shallots"], "onions"));
+// console.log(quickCheck([3, 5, 9, 125, 45, 2], 125));
+// console.log(quickCheck([true, false, false], undefined));
+
+// Basic Data Structures: Iterate Through All an Array's Items Using For Loops
+
+// Basic Data Structures: Add Key-Value Pairs to JavaScript Objects
+// let foods = {
+//   apples: 25,
+//   oranges: 32,
+//   plums: 28
+// };
+//
+// // change code below this line
+// foods.bananas = 13;
+// foods.grapes = 35;
+// foods['strawberries'] = 27;
+// // change code above this line
+//
+// console.log(foods);
+
+// Basic Data Structures: Modify an Object Nested Within an Object
+// let userActivity = {
+//   id: 23894201352,
+//   date: 'January 1, 2017',
+//   data: {
+//     totalUsers: 51,
+//     online: 42
+//   }
+// };
+//
+// // change code below this line
+// userActivity.data.online = 45
+// // change code above this line
+//
+// console.log(userActivity);
+
+// Basic Data Structures: Access Property Names with Bracket Notation
+// let foods = {
+//   apples: 25,
+//   oranges: 32,
+//   plums: 28,
+//   bananas: 13,
+//   grapes: 35,
+//   strawberries: 27
+// };
+// // do not change code above this line
+//
+// function checkInventory(scannedItem) {
+//   // change code below this line
+//   return foods[scannedItem]
+// }
+//
+// // change code below this line to test different cases:
+// console.log(checkInventory("apples"));
+// console.log(checkInventory("bananas"));
+// console.log(checkInventory("strawberries"));
+// console.log(checkInventory('pizza'));
+
+// Basic Data Structures: Use the delete Keyword to Remove Object Properties
+// let foods = {
+//   apples: 25,
+//   oranges: 32,
+//   plums: 28,
+//   bananas: 13,
+//   grapes: 35,
+//   strawberries: 27
+// };
+//
+// // change code below this line
+// delete foods.oranges;
+// delete foods.plums;
+// delete foods.strawberries;
+// // change code above this line
+//
+// console.log(foods);
+
+// Basic Data Structures: Check if an Object has a Property
+// let users = {
+//   Alan: {
+//     age: 27,
+//     online: true
+//   },
+//   Jeff: {
+//     age: 32,
+//     online: true
+//   },
+//   Sarah: {
+//     age: 48,
+//     online: true
+//   },
+//   Ryan: {
+//     age: 19,
+//     online: true
+//   }
+// };
+
+// function isEveryoneHere(obj) {
+//   // change code below this line
+//   if (users.hasOwnProperty('Alan', 'Jeff', 'Sarah', 'Ryan')) {
+//     return true;
+//   }
+//   return false;
+//   // change code above this line
+// }
+//
+// function isEveryoneHere(obj) {
+//   return (users.hasOwnProperty('Alan', 'Jeff', 'Sarah', 'Ryan')) ? true : false;
+// }
+//
+// console.log(isEveryoneHere(users));
+
+// Basic Data Structures: Iterate Through the Keys of an Object with a for...in Statement
+// let users = {
+//   Alan: {
+//     age: 27,
+//     online: false
+//   },
+//   Jeff: {
+//     age: 32,
+//     online: true
+//   },
+//   Sarah: {
+//     age: 48,
+//     online: false
+//   },
+//   Ryan: {
+//     age: 19,
+//     online: true
+//   }
+// };
+//
+// function countOnline(obj) {
+//   // change code below this line
+//   let onlineUsers = 0
+//   for (let user in obj) {
+//     if (obj[user].online === true) {
+//       onlineUsers++
+//     }
+//   } return onlineUsers;
+//   // change code above this line
+// }
+//
+// console.log(countOnline(users));
+
+// Basic Data Structures: Generate an Array of All Object Keys with Object.keys()
+// let users = {
+//   Alan: {
+//     age: 27,
+//     online: false
+//   },
+//   Jeff: {
+//     age: 32,
+//     online: true
+//   },
+//   Sarah: {
+//     age: 48,
+//     online: false
+//   },
+//   Ryan: {
+//     age: 19,
+//     online: true
+//   }
+// };
+//
+// function getArrayOfUsers(obj) {
+//   // change code below this line
+//   return Object.keys(obj);
+//   // change code above this line
+// }
+//
+// console.log(getArrayOfUsers(users));
+
+// Basic Data Structures: Modify an Array Stored in an Object
+// Take a look at the object we've provided in the code editor. The user object contains three keys. The datakey contains five keys, one of which contains an array of friends. From this, you can see how flexible objects are as data structures. We've started writing a function addFriend. Finish writing it so that it takes a user object and adds the name of the friend argument to the array stored in user.data.friends and returns that array.
+// let user = {
+//   name: 'Kenneth',
+//   age: 28,
+//   data: {
+//     username: 'kennethCodesAllDay',
+//     joinDate: 'March 26, 2016',
+//     organization: 'freeCodeCamp',
+//     friends: [
+//       'Sam',
+//       'Kira',
+//       'Tomo'
+//     ],
+//     location: {
+//       city: 'San Francisco',
+//       state: 'CA',
+//       country: 'USA'
+//     }
+//   }
+// };
+//
+// function addFriend(userObj, friend) {
+//   // change code below this line
+//   userObj.data.friends.push(friend);
+//   return userObj.data.friends;
+//   // change code above this line
+// }
+//
+// console.log(addFriend(user, 'SungOh'));
+
+// Basic Algorithm Scripting: Finders Keepers
+// Create a function that looks through an array (first argument) and returns the first element in the array that passes a truth test (second argument). If no element passes the test, return undefined.
+// function findElement(array, func) {
+//   let num = 0;
+//   // look through array using a for loop
+//   for (var i = 0; i < array.length; i++) {
+//     // the num variable is being passed into the function, so we set it to each index in our array.
+//     num = array[i];
+//     // the predefined function checks each number; if true, we return that num.
+//     if (func(num)) {
+//       return num;
+//     }
+//   }
+//   return undefined;
+// }
+//
+// console.log(findElement([1, 2, 4], num => num % 3 === 0));
+
+// Basic Algorithm Scripting: Boo who
+// Check if a value is classified as a boolean primitive. Return true or false.
+//
+// Boolean primitives are true and false.
+
+function booWho(bool) {
+  // use typeof to check the parameter
+  return typeof bool === 'boolean'
 }
 
-console.log(translatePigLatin("consonant"));
+// console.log(booWho(null));
+// console.log(booWho(true));
+// console.log(booWho({ "a": 1 }));
+
+// JavaScript Algorithms and Data Structures Projects: Palindrome Checker
+// Return true if the given string is a palindrome. Otherwise, return false.
+// function palindrome(str) {
+//   let reg = /[\W_]/g;
+//
+//   let smallStr = str.toLowerCase().replace(reg, "");
+//   let reversed = smallStr.split("").reverse().join("");
+//   if (reversed === smallStr) {
+//     return true;
+//   }
+//   return false;
+// }
+//
+// console.log(palindrome("racecar"));
+
+// JavaScript Algorithms and Data Structures Projects: Telephone Number Validator
+// Return true if the passed string looks like a valid US phone number.
+//
+// The user may fill out the form field any way they choose as long as it has the format of a valid US number. The following are examples of valid formats for US numbers (refer to the tests below for other variants):
+//
+// 555-555-5555
+// (555)555-5555
+// (555) 555-5555
+// 555 555 5555
+// 5555555555
+// 1 555 555 5555
+//
+// For this challenge you will be presented with a string such as 800-692-7753 or 8oo-six427676;laskdjf. Your job is to validate or reject the US phone number based on any combination of the formats provided above. The area code is required. If the country code is provided, you must confirm that the country code is 1. Return true if the string is a valid US phone number; otherwise return false.
+
+function telephoneCheck(str) {
+  // Good luck!
+  return true;
+}
+
+telephoneCheck("555-555-5555");
