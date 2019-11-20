@@ -56,3 +56,24 @@ function processData(inputString) {
 //  console.log(s + s2);
 
 // Day 2: Operators
+// Complete the solve function below.
+function solve(meal_cost, tip_percent, tax_percent) {
+    let tipCost = meal_cost * tip_percent / 100;
+    let taxCost = meal_cost * tax_percent / 100;
+    let totalCost = Math.round(meal_cost + tipCost + taxCost);
+
+    console.log(totalCost)
+}
+
+function FirstFactorial(num) {
+
+  let factorial = 1;
+  for (let i = 1; i <= num; i++) {
+    factorial *= i;
+  }
+  return factorial;
+
+}
+
+// keep this function call here
+console.log(FirstFactorial(readline()));
