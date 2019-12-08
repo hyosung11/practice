@@ -144,3 +144,10 @@ function length(str) {
 //
 // console.log(animals(2, 3, 5)) // ➞ 36);
 // console.log(animals(1, 2, 3)) // ➞ 22);
+
+// Fix this incorrect code!
+function checkAllEven(arr) {
+  return arr.every(x % 2 === 0)
+}
+
+const checkAllEven = (arr) => arr.every(num => num % 2 === 0) ;
