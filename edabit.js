@@ -4,7 +4,7 @@
 // }
 // console.log(howManySeconds(5));
 
-const howManySeconds = (hours) => hours * 3600
+// const howManySeconds = (hours) => hours * 3600
 
 // console.log(howManySeconds(5));
 
@@ -137,10 +137,10 @@ function length(str) {
 //   return (chickens * 2) + (cows * 4) + (pigs * 4)
 // }
 
-function animals(chickens, cows, pigs) {
-  let legs = (chickens * 2) + (cows * 4) + (pigs * 4)
-  return legs;
-}
-
-console.log(animals(2, 3, 5)) // ➞ 36);
-console.log(animals(1, 2, 3)) // ➞ 22);
+// function animals(chickens, cows, pigs) {
+//   let legs = (chickens * 2) + (cows * 4) + (pigs * 4)
+//   return legs;
+// }
+//
+// console.log(animals(2, 3, 5)) // ➞ 36);
+// console.log(animals(1, 2, 3)) // ➞ 22);
